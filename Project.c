@@ -13,15 +13,21 @@ void gotoxy();
 //Main Function body
 int main() 
 
-{   char r[10];
+{   char r[10],d[10];
+    system("cls");
     pr("Welcome to Online Examination System","~");
     pr("Please Login using your Credentials"," ");
     gotoxy(78,0);
     pr("","~");
     gotoxy(10,10);
     printf("Enter Your Roll No.-");
+    gotoxy(15,10);
+    printf("Enter Your DOB(dd/mm/yyyy)-");
     gotoxy(10,35);
     gets(r);
+    gotoxy(15,44);
+    gets(d);
+    
     printf("%s",r);
     
     while(1){};
