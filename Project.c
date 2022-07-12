@@ -14,9 +14,10 @@ void gotoxy();
 int main() 
 
 {   char r[10];
-    system("cls");
     pr("Welcome to Online Examination System","~");
     pr("Please Login using your Credentials"," ");
+    gotoxy(78,0);
+    pr("","~");
     gotoxy(10,10);
     printf("Enter Your Roll No.-");
     gotoxy(10,35);
@@ -36,7 +37,7 @@ void pr(char a[100],char b[1])//Function to print text in centre of screen
 {
     int n;
     n=strlen(a);
-    printf("\n");
+    //printf("\n");
 
     for (int x=0;x<((columns-n)/2)-2;x++)
     printf("%s",b);
