@@ -6,11 +6,13 @@
 int columns=120;
 int d;
 int r;
-char s[4];
+char s[4],o;
+FILE *f;
 //Initialising Functions
 void pr();
 void gotoxy();
 void welcome();
+void paper();
 
 struct student{
     int roll_no;
@@ -30,7 +32,7 @@ int main()
 
 {   
     
-//printf ( "\033[2J");
+printf ( "\033[2J");
     system("cls");
     p1:
     {
@@ -56,16 +58,23 @@ int main()
                 printf("Your Previous Scores are\n\n          Physical Education : %d\n          Hindustani Music : %d\n          Economics : %d\n          English Core : %d\n          Chemistry : %d\n",s1[i].score_pe,s1[i].score_hm,s1[i].score_eco,s1[i].score_eng,s1[i].score_chem);
                 gotoxy(25,10);
                 printf("Enter Subject code(PE/HM/CHEM/ENG/ECO) : ");
-                scanf("%s",s);}
+                scanf("%s",s);
+                printf ( "\033[2J");
+                gotoxy(0,0);
+                f=fopen("PE.txt","r");
+                paper(f);
+                }
 
             else{
-                system("cls");
+                //system("cls");
+                printf ( "\033[2J");
                 gotoxy(20,0);
                 printf("Hello %s \n",s1[i].name);
                 printf("You entered the wrong Dob\nPlease try again");
                 goto p1;
                 }
         }
+
     
     while(1){}
 
@@ -90,6 +99,26 @@ int main()
 }}
 
 //Function definations
+void paper(FILE *f)
+{
+    char a;
+    char o;
+    a=getc(f);
+    while(a!='~')
+    {
+        
+        printf("%c",a);
+        a=getc(f);
+    }
+    printf("\nEnter option : ");
+    scanf("%s",&o);
+    a=getc(f);
+    if (a==o)
+    {
+        printf("y");
+    }
+
+}
 void gotoxy(int row,int col)
 {
     printf ( "\033[%d;%dH",row,col);

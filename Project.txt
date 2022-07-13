@@ -1,5 +1,0 @@
-loop 1 till getch is not ~ -- question print
-enter choice 
-getch()
-if ch==1
-marks++
