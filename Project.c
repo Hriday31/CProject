@@ -47,11 +47,14 @@ int main()
                 printf ( "\033[2J");
                 gotoxy(0,0);
                 pr("","~");
-                pr(("Welcome %s \n",s1[i].name)," ");
+                char *z;
+                
+                pr("Welcome Back"," ");
+                pr(("%s",s1[i].name)," ");
                 pr("","~");
-                gotoxy(5,10);
-                printf("Your Previous Scores are\nPhysical Education : %d\nHindustani Music : %d\nEconomics : %d\nEnglish Core : %d\nChemistry : %d\n",s1[i].score_pe,s1[i].score_hm,s1[i].score_eco,s1[i].score_eng,s1[i].score_chem);
                 gotoxy(15,10);
+                printf("Your Previous Scores are\n\n          Physical Education : %d\n          Hindustani Music : %d\n          Economics : %d\n          English Core : %d\n          Chemistry : %d\n",s1[i].score_pe,s1[i].score_hm,s1[i].score_eco,s1[i].score_eng,s1[i].score_chem);
+                gotoxy(25,10);
                 printf("Enter Subject code(PE/HM/CHEM/ENG/ECO) : ");
                 scanf("%s",s);}
 
@@ -112,12 +115,12 @@ void pr(char a[100],char b[1])//Function to print text in centre of screen
     n=strlen(a);
     printf("\n");
 
-    for (int x=0;x<((columns-n)/2)-2;x++)
+    for (int x=0;x<((columns-n)/2);x++)
     printf("%s",b);
 
     printf("%s",a);
 
-    for (int x=0;x<((columns-n)/2)-2;x++)
+    for (int x=0;x<((columns-n)/2);x++)
     printf("%s",b);
 
     printf("\n");
