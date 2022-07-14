@@ -4,61 +4,59 @@ Q1. The total number of matches in a knock out tournament of 34 teams are
  (3) 33 
  (4) 35 
 ~1
-
 Q2. The primary goal of Intramural competition is 
  (1) To provide opportunity for mass participation of students 
  (2) To participate in inter-school competition 
  (3) To provide intra-school competition 
  (4) All of the above 1
-~
-2
-
+~1
 Q3. The food component present in sugar is 
  (1) fats
  (2) protein 
  (3) vitamin
  (4) carbohydrate
- 
+~1
 Q4. The main source of Vitamin C is 
  (1) Guava
  (2) Egg 
  (3) Milk
- (4) Banana 
-
+ (4) Banana
+~1
 Q5. Which asana is helpful in maintaining normal blood pressure ? 
  (1) Shavasana
  (2) Padmasana 
  (3) Shalabhasana
- (4) Vakrasana 
-
+ (4) Vakrasana
+~1
 Q6. Gomukhasana, Chakrasana and Matsyasana are helpful in curing which 
 disease ? 
  (1) Diabetes
  (2) Backpain 
  (3) Asthama
- (4) Obesity 
-
+ (4) Obesity
+~1
 Q7. When child is not able to adjust within society or having no friends, is 
 suffering from 
  (1) ADHD
  (2) ASD 
  (3) ODD
  (4) OCD
-
+~1
 Q8. Obsessive Compulsive Disorder is a/an 
  (1) Argumentative disorder 
  (2) Anxiety disorder 
  (3) Receiving and responding disorder 
  (4) All of these
-
+~1
 Q9. Menarche is defined as the 
  (1) Ending of menstrual period in women 
  (2) Beginning of menstrual period in women 
  (3) Time of pregnancy 
  (4) Beginning of pregnancy 1
-
+~1
 Q10. Scoliosis is a postural deformity related with 
  (1) foot
  (2) leg 
  (3) vertebral column 
  (4) hand
+~1|

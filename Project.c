@@ -13,6 +13,11 @@ void pr();
 void gotoxy();
 void welcome();
 void paper();
+void debug()
+{
+    char t;
+    scanf("%c",&t);
+}
 
 struct student{
     int roll_no;
@@ -38,11 +43,7 @@ printf ( "\033[2J");
     {
     welcome();}
     struct student s1[100]={{001,31122003,"Hriday Aggarwal",0,0,0,0,0},{002,21032005,"Anandita",0,0,0,0,0}};
-    //s1[0].roll_no=001;
-    //s1[0].dob=31122003;
-    //strcpy(s1[0].name,"hriday");
-    for(int i=0; i<100; i++)
-    {
+    for (int i=0;i<100;i++){
         if(r==s1[i].roll_no)
         {
             if(d==s1[i].dob){
@@ -61,8 +62,7 @@ printf ( "\033[2J");
                 scanf("%s",s);
                 printf ( "\033[2J");
                 gotoxy(0,0);
-                f=fopen("PE.txt","r");
-                paper(f);
+                paper();
                 }
 
             else{
@@ -80,26 +80,39 @@ printf ( "\033[2J");
 }
 
 //Function definations
-void paper(FILE *f)
+void paper()
 {
-    char a;
-    char o;
-    a=getc(f);
-    while(a!='~')
-    {
-        
-        printf("%c",a);
-        a=getc(f);
+    FILE *f;
+    f=fopen("PE.txt","r");
+    char a,o;
+    int marks=0;
+    
+    while(a!='|')
+    {   a=getc(f);
+            
+        if (a=='~')
+        {   debug();
+            a=getc(f);
+            printf("\nEnter option : ");
+            scanf("%c",&o);
+            
+            if (a==o)
+            {   marks++;
+                //printf("y");
+                continue;
+            }continue;
+            
+        }
+        else if(a=='|'){break;}
+        else{
+            printf("%c",a);
+        }
+        continue;
     }
-    printf("\nEnter option : ");
-    scanf("%s",&o);
-    a=getc(f);
-    if (a==o)
-    {
-        printf("y");
-    }
-
+    printf("%d",marks);
 }
+
+
 void gotoxy(int row,int col)
 {
     printf ( "\033[%d;%dH",row,col);
