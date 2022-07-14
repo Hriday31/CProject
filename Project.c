@@ -75,28 +75,9 @@ printf ( "\033[2J");
                 }
         }
 
-    
+    }
     while(1){}
-
-    /*if r in s
-        if d match dob 
-            pg 2a
-            goto pg 3
-        else
-            wrong pass
-             goto pg1
-    else
-        pg 2b credentials saved  
-        goto pg 3
-
-    pg 3 paper 
-        pg 4 
-        print result
-        add rsult of that paper to structure
-        do you want to go back to home or exir*/
-   
-
-}}
+}
 
 //Function definations
 void paper(FILE *f)
