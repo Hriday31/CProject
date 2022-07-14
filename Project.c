@@ -56,7 +56,7 @@ printf ( "\033[2J");
                 pr(("%s",s1[i].name)," ");
                 pr("","~");
                 gotoxy(15,10);
-                printf("Your Previous Scores are\n\n          Physical Education : %d\n          Chemistry : %d\n          Physics : %d\n          Political Science : %d\n          Psychology : %d\n",s1[i].score_pe,s1[i].score_hm,s1[i].score_eco,s1[i].score_eng,s1[i].score_chem);
+                printf("Your Previous Scores are\n\n          Physical Education : %d\n          Chemistry : %d\n          Physics : %d\n          Political Science : %d\n          Psychology : %d\n",s1[i].score_pe,s1[i].score_chem,s1[i].score_physics,s1[i].score_polsci,s1[i].score_psy);
                 gotoxy(25,10);
                 printf("Enter Subject code(PE/CHEM/PHYSICS/POLSCI/PSY) : ");
                 scanf("%s",s);
