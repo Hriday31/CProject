@@ -1,6 +1,7 @@
 //Header files
 #include <stdio.h>
 #include <string.h>
+#include<stdlib.h>
 
 //Declaring global variables
 int columns=120;
@@ -18,6 +19,7 @@ void pr();
 void gotoxy();
 void welcome();
 void paper();
+void displayrecord();
 void debug()
 {
     char t;
@@ -92,7 +94,7 @@ printf ( "\033[2J");
                 printf("%d",q);   
                 if(q==1){
                 printf ( "\033[2J");
-                goto p1;}
+                goto p4;}
                 }
 
             if(d!=s1[i].dob){
@@ -135,7 +137,43 @@ printf ( "\033[2J");
                         goto p1;
                         break;}
                 default: goto p1;
-            }
+            };
+
+        //p4
+        p4:{
+            void displayrecord(){
+	system("cls");
+
+	printf("\nPhysical Education \t\t%d\n",s1[size].score_pe);
+                printf("\nPhysics \t\t%d\n",s1[size].score_phy);
+                printf("\nChemistry \t\t%d\n",s1[size].score_chem);
+                printf("\nPolitical Science\t\t%d\n",s1[size].score_polsci);
+                printf("\nPsychology\t\t%d\n",s1[size].score_psy);
+
+	printf("\n\n\n\t");
+} displayrecord();
+
+            int k;
+        printf("If you want to :\n go back to login page enter 1\n enter 2\n");
+            scanf("%d",&k);
+            switch(k)
+            {
+                case 1: {
+                printf ( "\033[2J");
+                goto p1;
+                break;}
+                case 2:{
+                // exit
+			    exit(0);
+			    break;}
+
+			default:
+			printf("\nINVALID CHOICE...\n");
+        }
+
+    } 
+            
+            
             
         }
 
@@ -215,3 +253,5 @@ void pr(char a[100],char b[1])//Function to print text in centre of screen
     printf("%s",b);
 
     printf("\n");
+}
+
