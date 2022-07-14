@@ -33,7 +33,7 @@ int main()
 {   
     
 printf ( "\033[2J");
-    system("cls");
+    //system("cls");
     p1:
     {
     welcome();}
