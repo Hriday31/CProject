@@ -46,19 +46,19 @@ printf ( "\033[2J");
     system("cls");
     
     struct student s1[]={{14801,31122003,"Hriday Aggarwal",0,0,0,0,0},{14802,21032005,"Anandita",0,0,0,0,0},{14803,21032005,"Anandita",0,0,0,0,0}};
+    size=sizeof(s1)/sizeof(s1[0]);
     p1:
     {welcome();}
-    size=sizeof(s1)/sizeof(s1[0]);
+    
     printf("%d size  ",size);
-    for (int b=0;b<(size);b++){printf("%d ",s1[b].roll_no);}
-    for (int i=0;i<(size);i++){printf("\n%d",s1[i].roll_no);
+   
+    for (int i=0;i<(size);i++)
         if(r==s1[i].roll_no)
-        {   w=1;
+        { 
             if(d==s1[i].dob){
                 printf ( "\033[2J");
                 gotoxy(0,0);
                 pr("","~");
-                char *z;
                 
                 pr("Welcome Back"," ");
                 pr(("%s",&s1[i].name)," ");
@@ -66,9 +66,9 @@ printf ( "\033[2J");
                 gotoxy(15,10);
                 printf("Your Previous Scores are\n\n          Physical Education : %d\n          Physics : %d\n          Chemistry : %d\n          Political Science : %d\n          Psychology : %d\n",s1[i].score_pe,s1[i].score_phy,s1[i].score_chem,s1[i].score_polsci,s1[i].score_psy);
                 gotoxy(25,10);
-                printf("Enter Subject code:\n  A. Physical Education\n  B. Physics\n  C. Chemistry\n  D. Political Science\n  E. Psychology\n ");
+                p3 : {printf("Enter Subject code:\n  A. Physical Education\n  B. Physics\n  C. Chemistry\n  D. Political Science\n  E. Psychology\n ");
                 debug();
-                scanf("%s", &subject_code);
+                scanf("%s", &subject_code);}
                 printf ( "\033[2J");
                 gotoxy(0,0);
                 FILE *f;
@@ -84,7 +84,10 @@ printf ( "\033[2J");
                     break;
                     case 'E' : f=fopen("PE.txt","r");
                     break;
-                    default: printf("This is an invalid subject code.");
+                    default: 
+                    {printf ( "\033[2J");
+                    printf("This is an invalid subject code.");
+                    goto p3;}
                              
                 }
                 paper(f);
@@ -96,49 +99,16 @@ printf ( "\033[2J");
                 }
 
             if(d!=s1[i].dob){
-                //system("cls");
+                system("cls");
                 printf ( "\033[2J");
+                printf("\nFOund at %d  %d",i,s1[i].dob);
                 gotoxy(20,0);
                 printf("Hello %s \n",s1[i].name);
                 printf("You entered the wrong Dob\nPlease try again");
                 goto p1;
                 }
-        }}
-        if(w==0)
-        {
-            printf("This record is not in the database.\n");
-            printf("If you want to :\n go back to the previous page enter 1\n sign up as new student enter 2\n");
-            scanf("%d",&p);
-            switch(p)
-            {
-                case 1: {
-                printf ( "\033[2J");
-                goto p1;
-                break;}
-                case 2: {printf("Enter name : ");
-                        scanf("%s",&newname);
-                        printf("Enter you DOB : ");
-                        scanf("%d",&newdob);
-                        printf("\n");
-                        size=sizeof(s1)/sizeof(s1[1]);
-                        s1[size].roll_no=14801+size;
-                        s1[size].dob=newdob;
-                        strcpy(s1[size].name , newname);
-                        s1[size].score_pe=0;
-                        s1[size].score_phy=0;
-                        s1[size].score_chem=0;
-                        s1[size].score_polsci=0;
-                        s1[size].score_psy=0;
-                        printf ( "\033[2J");
-                        gotoxy(20,0);
-                        printf("Your roll number is : %d", s1[size]);
-                        goto p1;
-                        break;}
-                default: goto p1;
-            }
-            
         }
-
+        
     
     while(1){}
 }
@@ -177,7 +147,6 @@ void paper(FILE *f)
     
     pr("TEST ENDS","*");
     pr("enter 1 to go to results"," ");
-    debug();
 }
 
 
@@ -215,3 +184,4 @@ void pr(char a[100],char b[1])//Function to print text in centre of screen
     printf("%s",b);
 
     printf("\n");
+}
