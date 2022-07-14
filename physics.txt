@@ -68,5 +68,5 @@ Q10. An electron and a positron each having a mass equivalent to 0.53 MeV annihi
 (2) 1.06 MeV
 (3) 2.12 MeV
 (4) zero
-~2
+~2|
 
