@@ -1,0 +1,73 @@
+Money and banking
+
+Q1. What is the defect of the barter system?
+(1) Lack of double coincidence of wants
+(2) Difficulty in the measurement of value
+(3) Difficulty in store of value
+(4) All of these
+~4
+
+Q2. Which of the following is the credit money?
+(1) Cheque and draft
+(2) Promissory note
+(3) Exchange note
+(4) All of these
+~4
+
+Q3. Which among the following is the near money?
+(1) Bonds
+(2) Insurance policy
+(3) Securities
+(4) All of these
+~4
+
+Q4. Which of the following is the feature of money?
+(1) General acceptability
+(2) Homogeneous unit
+(3) Liquid asset
+(4) All of these
+~4
+
+Q5. In order to encourage investment in the economy, the Central Bank may ________
+(1) Reduce Cash Reserve Ratio
+(2) Increase Cash Reserve Ratio
+(3) Sell Government securities in the open market
+(4) Increase Bank Rate
+~1
+
+Q6. Institution that accepts deposits for lending purpose is known as __________
+(1) Commercial Bank
+(2) Central Bank
+(3) Government
+(4) Public
+~1
+
+Q7. Which of the following is the function of a commercial bank?
+(1) Accepting deposits
+(2) Credit creation
+(3) Agency function
+(4) All of these
+~4
+
+Q8. The central bank can increase the availability of credit by:
+(1) Rasing repo rate
+(2) Raising reverse repo rate
+(3) Buying government securities
+(4) Selling government securities
+~4
+
+Q9. Giving permission to withdraw money by an amount more than deposited to is known as _________
+(1) Advance
+(2) Overdraft
+(3) Loan
+(4) None of these
+~2
+
+Q10. What are the alternative measures of money supply in India?
+(1) M1
+(2) M2
+(3) M3 and M4
+(4) All of these
+~4
+
+
