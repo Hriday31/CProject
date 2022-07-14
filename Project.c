@@ -103,7 +103,7 @@ int main()
                 printf("You entered the wrong date of birth please try again");
                 goto p1;
                 }
-        }
+        
 
 
 
@@ -135,7 +135,7 @@ int main()
 			printf("\nINVALID CHOICE...\n");
             goto p4;
         }
-    }
+    }}
     while(1){}
 }
 
