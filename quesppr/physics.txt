@@ -1,0 +1,72 @@
+PHYSICS
+
+Q1. Which one of the following is the unit of electric field?
+(1) Coulomb
+(2) Newton
+(3) Volt
+(4) N/C
+~4
+
+Q2. Three charges + 3q + q and Q are placed on a st. line with equal separation. In order to maket the net force on q to be zero, the value of Q will be :
+(1) +3q
+(2) +2q
+(3) -3q
+(4) -4q
+~1
+
+Q3. Two copper spheres of the same radius, one solid and the other hollow, are charged to the same potential. Which will have more charge?
+(1) Solid sphere
+(2) Hollow sphere
+(3) Both will have an equal charge
+(4) None of these
+~3
+
+Q4. The capacitance of a capacitor will decrease if we introduce a slab of:
+(1) copper
+(2) aluminium
+(3) zinc
+(4) None of these
+~4
+
+Q5. Tangent law is applicable only when:
+(1) two uniform and mutually perpendicular magnetic fields exist
+(2) two magnetic fields exist
+(3) horizontal component of earth’s magnetic field is present
+(4) uniform magnetic field are used
+~1
+
+Q6. Ferrites may be:
+(1) ant. ferromagnetic
+(2) ferromagnetic
+(3) ferrimagnetic
+(4) None of the above
+~2
+
+Q7. In reverse biasing:
+(1) large amount of current flows
+(2) no current flows
+(3) potential barrier across junction increases
+(4) depletion layer resistance increases
+~3
+
+Q8. Main function of a transistor is to :
+(1) rectify
+(2) simplify
+(3) amplify
+(4) all the above
+~3
+
+Q9. According to Yukawa’s theory of nuclear forces, the origin of nuclear force between nucleons is due to the exchange of
+(1) mesons
+(2) photons
+(3) electrons
+(4) positrons
+~2
+
+Q10. An electron and a positron each having a mass equivalent to 0.53 MeV annihilate each other and produce a photon. The minimum energy of the photon is.
+(1) 0.53 MeV
+(2) 1.06 MeV
+(3) 2.12 MeV
+(4) zero
+~2
+
