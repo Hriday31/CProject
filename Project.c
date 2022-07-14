@@ -24,10 +24,10 @@ struct student{
     int dob;
     char name[30];
     int score_pe;
-    int score_hm;
     int score_chem;
-    int score_eng;
-    int score_eco;
+    int score_physics;
+    int score_polsci;
+    int score_psy;
 };
 
 
@@ -62,7 +62,7 @@ printf ( "\033[2J");
                 scanf("%s",s);
                 printf ( "\033[2J");
                 gotoxy(0,0);
-                paper();
+                paper(); //p2
                 }
 
             else{
@@ -70,7 +70,7 @@ printf ( "\033[2J");
                 printf ( "\033[2J");
                 gotoxy(20,0);
                 printf("Hello %s \n",s1[i].name);
-                printf("You entered the wrong Dob\nPlease try again");
+                printf("You entered the wrong Date of Birth\nPlease try again");
                 goto p1;
                 }
         }
