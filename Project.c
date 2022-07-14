@@ -4,7 +4,7 @@
 
 //Declaring global variables
 int columns=120;
-int d;
+int d,q;
 int r;
 char s[4],o;
 FILE *f;
@@ -24,10 +24,10 @@ struct student{
     int dob;
     char name[30];
     int score_pe;
+    int score_hm;
     int score_chem;
-    int score_physics;
-    int score_polsci;
-    int score_psy;
+    int score_eng;
+    int score_eco;
 };
 
 
@@ -38,7 +38,7 @@ int main()
 {   
     
 printf ( "\033[2J");
-    //system("cls");
+    system("cls");
     p1:
     {
     welcome();}
@@ -56,13 +56,20 @@ printf ( "\033[2J");
                 pr(("%s",s1[i].name)," ");
                 pr("","~");
                 gotoxy(15,10);
-                printf("Your Previous Scores are\n\n          Physical Education : %d\n          Chemistry : %d\n          Physics : %d\n          Political Science : %d\n          Psychology : %d\n",s1[i].score_pe,s1[i].score_chem,s1[i].score_physics,s1[i].score_polsci,s1[i].score_psy);
+                printf("Your Previous Scores are\n\n          Physical Education : %d\n          Hindustani Music : %d\n          Economics : %d\n          English Core : %d\n          Chemistry : %d\n",s1[i].score_pe,s1[i].score_hm,s1[i].score_eco,s1[i].score_eng,s1[i].score_chem);
                 gotoxy(25,10);
-                printf("Enter Subject code(PE/CHEM/PHYSICS/POLSCI/PSY) : ");
+                printf("Enter Subject code(PE/HM/CHEM/ENG/ECO) : ");
                 scanf("%s",s);
                 printf ( "\033[2J");
                 gotoxy(0,0);
-                paper(); //p2
+                FILE *f;
+                f=fopen("PE.txt","r");
+                paper(f);
+    scanf("%d",&q);
+                printf("%d",q);   
+                if(q==1){
+                printf ( "\033[2J");
+                goto p1;}
                 }
 
             else{
@@ -70,7 +77,7 @@ printf ( "\033[2J");
                 printf ( "\033[2J");
                 gotoxy(20,0);
                 printf("Hello %s \n",s1[i].name);
-                printf("You entered the wrong Date of Birth\nPlease try again");
+                printf("You entered the wrong Dob\nPlease try again");
                 goto p1;
                 }
         }
@@ -80,16 +87,17 @@ printf ( "\033[2J");
 }
 
 //Function definations
-void paper()
+void paper(FILE *f)
 {
-    FILE *f;
-    f=fopen("PE.txt","r");
-    char a,o;
-    int marks=0;
+   
+    char a,o,end;
+    int marks=0,q=0;
+    pr("TEST STARTS","*");
     
     while(a!='|')
-    {   a=getc(f);
-            
+    {   
+
+        a=getc(f);
         if (a=='~')
         {   debug();
             a=getc(f);
@@ -109,7 +117,10 @@ void paper()
         }
         continue;
     }
-    printf("%d",marks);
+    
+    pr("TEST ENDS","*");
+    pr("enter 1 to go to results"," ");
+    debug();
 }
 
 
