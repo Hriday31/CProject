@@ -4,9 +4,9 @@
 #include <stdlib.h>
 
 //Declaring global variables
-int d,size,w=0,r,q=0,marks=0,k,newdob,columns=120;
+int d,size,w=0,r,q=0,marks=0,k,newdob,columns=120,p;
 FILE *f;
-char newname[30],subject_code;
+char newname[30],subject_code,*name2;
 
 //Initialising Functions
 void pr();
@@ -32,19 +32,31 @@ int main()
 {   
     printf ( "\033[2J");
     system("cls");
-    
-    struct student s1[]={{14801,31122003,"Hriday Aggarwal",10,9,9,0,7},{14802,21032005,"Anandita",10,10,9,8,0},{14803,14122007,"Sabhyata",10,10,9,0,8}};
+    struct student s1[100]={{14801,31122003,"Hriday Aggarwal",10,9,9,0,7},{14802,21032005,"Anandita",10,10,9,8,0},{14803,14122007,"Sabhyata",10,10,9,0,8},};
     size=sizeof(s1)/sizeof(s1[0]);
+    int l=3;
+    /*printf("%d",size);
+    s1[3].roll_no=14804;
+    s1[3].dob=31122002;
+    strcpy(s1[3].name ,"hriday");
+    //scanf("%s",&s1[size].name);
+    s1[3].score_pe=0;
+    s1[3].score_phy=0;
+    s1[3].score_chem=0;
+    s1[3].score_polsci=0;
+    s1[3].score_psy=0;
+    size=sizeof(s1)/sizeof(s1[0]);
+    printf("%d",size);*/
     p1:{welcome();}
     for (int i=0;i<(size);i++){
         if(r==s1[i].roll_no)
-        { 
+        {   w=1;
             if(d==s1[i].dob){
                 p2:{printf ( "\033[2J");}
                 gotoxy(0,0);
                 pr("","~");
                 pr("Welcome Back"," ");
-                pr(("%s",&s1[i].name)," ");
+                pr(s1[i].name," ");
                 pr("","~");
                 gotoxy(27,0);
                 pr("","~");
@@ -135,7 +147,50 @@ int main()
 			printf("\nINVALID CHOICE...\n");
             goto p4;
         }
-    }}
+        }
+    }if(w==0)
+    {   printf ( "\033[2J");
+        gotoxy(0,0);
+        pr("Sorry your Record does not exist","~");
+        printf("If you want to :\n go back to the previous page enter 1\n sign up as new student enter 2\n");
+        gotoxy(27,0);
+        pr("","~");
+        gotoxy(3,30);
+        scanf("%d",&p);
+        switch(p)
+        {
+            case 1: {
+            printf ( "\033[2J");
+            goto p1;
+            break;}
+            case 2: {gotoxy(8,0);
+                    printf("Enter name : ");
+                    gotoxy(8,30);
+                    scanf("%s",&newname);
+                    gotoxy(9,0);
+                    printf("Enter you DOB : ");
+                    gotoxy(9,30);
+                    scanf("%d",&newdob);
+                    s1[l].roll_no=14801+l;
+                    s1[l].dob=newdob;
+                    strcpy(s1[l].name , newname);
+                    s1[l].score_pe=0;
+                    s1[l].score_phy=0;
+                    s1[l].score_chem=0;
+                    s1[l].score_polsci=0;
+                    s1[l].score_psy=0;
+                    printf ( "\033[2J");
+                    gotoxy(20,0);
+                    printf("Your roll number is :%d", s1[l].roll_no);
+                    l=l+1;
+                    goto p1;
+                    break;}
+            default: goto p1;
+        }
+        
+    }
+
+    
     while(1){}
 }
 
