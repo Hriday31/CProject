@@ -35,18 +35,6 @@ int main()
     struct student s1[100]={{14801,31122003,"Hriday Aggarwal",10,9,9,0,7},{14802,21032005,"Anandita",10,10,9,8,0},{14803,14122007,"Sabhyata",10,10,9,0,8},};
     size=sizeof(s1)/sizeof(s1[0]);
     int l=3;
-    /*printf("%d",size);
-    s1[3].roll_no=14804;
-    s1[3].dob=31122002;
-    strcpy(s1[3].name ,"hriday");
-    //scanf("%s",&s1[size].name);
-    s1[3].score_pe=0;
-    s1[3].score_phy=0;
-    s1[3].score_chem=0;
-    s1[3].score_polsci=0;
-    s1[3].score_psy=0;
-    size=sizeof(s1)/sizeof(s1[0]);
-    printf("%d",size);*/
     p1:{welcome();}
     for (int i=0;i<(size);i++){
         if(r==s1[i].roll_no)
@@ -62,8 +50,9 @@ int main()
                 pr("","~");
                 gotoxy(10,10);
                 printf("Your Previous Scores are\n\n\tPhysical Education : %d\n\tPhysics : %d\n\tChemistry : %d\n\tPolitical Science : %d\n\tPsychology : %d\n",s1[i].score_pe,s1[i].score_phy,s1[i].score_chem,s1[i].score_polsci,s1[i].score_psy);
-                gotoxy(20,10);
-                p3 : {printf("Enter Subject code:\n\tA. Physical Education\n\tB. Physics\n\tC. Chemistry\n\tD. Political Science\n\tE. Psychology\n ");
+               
+                p3 : { gotoxy(20,10);
+                printf("Enter Subject code:\n\tA. Physical Education\n\tB. Physics\n\tC. Chemistry\n\tD. Political Science\n\tE. Psychology\n ");
                 debug();
                 
                 gotoxy(20,35);
@@ -95,7 +84,11 @@ int main()
                     break;
                     default: 
                     {printf ( "\033[2J");
-                    printf("This is an invalid subject code.");
+                    pr("","~");
+                    pr("This is an invalid subject code."," ");
+                    pr("","~");
+                    gotoxy(27,0);
+                    pr("","~");
                     goto p3;}
                              
                 }
@@ -121,17 +114,29 @@ int main()
 
             printf ( "\033[2J");
             p4:{gotoxy(0,0);
-                pr("Test Submitted Successfully","~");
-            gotoxy(27,0);
-            pr("","~");}
-            gotoxy(10,0);
-            printf("\nPhysical Education \t\t%d\n",s1[i].score_pe);
-            printf("\nPhysics \t\t\t%d\n",s1[i].score_phy);
-            printf("\nChemistry \t\t\t%d\n",s1[i].score_chem);
-            printf("\nPolitical Science\t\t%d\n",s1[i].score_polsci);
-            printf("\nPsychology\t\t\t%d\n",s1[i].score_psy);
-            gotoxy(25,0);
-            printf("\tIf you want to :\n\tGo back to tests page enter 1\n\tExit enter 2\t\t\t");
+                pr("","~");
+                pr("Test Submitted Successfully"," ");
+                pr("","~");
+                gotoxy(27,0);
+                pr("","~");}
+            gotoxy(8,0);
+            pr(" Your updated score is: "," ");
+            gotoxy(10,10);
+            printf("Physical Education \t\t%d\n",s1[i].score_pe);
+            gotoxy(11,10);
+            printf("Physics \t\t\t%d\n",s1[i].score_phy);
+            gotoxy(12,10);
+            printf("Chemistry \t\t\t%d\n",s1[i].score_chem);
+            gotoxy(13,10);
+            printf("Political Science\t\t%d\n",s1[i].score_polsci);
+            gotoxy(14,10);
+            printf("Psychology\t\t\t%d\n",s1[i].score_psy);
+            gotoxy(25,10);
+            printf("If you want to :");
+            gotoxy(26,10);
+            printf("Go back to tests page enter 1");
+            gotoxy(27,10);
+            printf("Exit enter 2:\t\t\t");
             scanf("%d",&k);
             switch(k)
             {
@@ -151,11 +156,18 @@ int main()
     }if(w==0)
     {   printf ( "\033[2J");
         gotoxy(0,0);
-        pr("Sorry your Record does not exist","~");
-        printf("If you want to :\n go back to the previous page enter 1\n sign up as new student enter 2\n");
+        pr("","~");
+        pr("Sorry your Record does not exist"," ");
+        pr("","~");
+        gotoxy(10,10);
+        printf("If you want to :");
+        gotoxy(11,10);
+        printf("return to the previous page enter 1");
+        gotoxy(12,10);
+        printf( "sign up as new student enter 2: ");
         gotoxy(27,0);
         pr("","~");
-        gotoxy(3,30);
+        gotoxy(12,45);
         scanf("%d",&p);
         switch(p)
         {
@@ -163,13 +175,13 @@ int main()
             printf ( "\033[2J");
             goto p1;
             break;}
-            case 2: {gotoxy(8,0);
+            case 2: {gotoxy(8,10);
                     printf("Enter name : ");
-                    gotoxy(8,30);
+                    gotoxy(8,40);
                     scanf("%s",&newname);
-                    gotoxy(9,0);
+                    gotoxy(9,10);
                     printf("Enter you DOB : ");
-                    gotoxy(9,30);
+                    gotoxy(9,40);
                     scanf("%d",&newdob);
                     s1[l].roll_no=14801+l;
                     s1[l].dob=newdob;
@@ -180,7 +192,9 @@ int main()
                     s1[l].score_polsci=0;
                     s1[l].score_psy=0;
                     printf ( "\033[2J");
-                    gotoxy(20,0);
+                    gotoxy(20,10);
+                    printf("Welcome New User: %s", s1[l].name);
+                    gotoxy(21,10);
                     printf("Your roll number is :%d", s1[l].roll_no);
                     l=l+1;
                     goto p1;
@@ -200,10 +214,12 @@ void paper(FILE *f)
 {
    
     char a,o,end;
-    pr("TEST STARTS","*");
+    pr("","~");
+    pr("TEST STARTS"," ");
+    pr("","~");
     while(a!='|')
     {   
-
+    
     a=getc(f);
     if (a=='~')
     {   debug();
@@ -213,9 +229,9 @@ void paper(FILE *f)
         
         if (a==o)
         {   marks++;
-            //printf("y");
             continue;
-        }continue;
+        }
+        continue;
         
     }
     else if(a=='|'){break;}
